@@ -1,3 +1,51 @@
+# Frontend (Client)
+
+React + Vite frontend for the Todo app.
+
+## Prerequisites
+
+- Node.js 18+ (recommended: latest LTS)
+- npm (comes with Node.js)
+- Running backend API
+
+## Setup
+
+1. Open a terminal in `client`.
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in `client` with:
+
+   ```env
+   VITE_SERVER_API_URL=http://localhost:3000/api
+   ```
+
+## Run the app
+
+Start the Vite dev server:
+
+```bash
+npm run dev
+```
+
+By default, Vite runs on `http://localhost:5173`.
+
+## Build for production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Assumptions and limitations
+
+- The frontend expects the backend base URL from `VITE_SERVER_API_URL`.
+- The backend must allow CORS from your frontend origin (the current backend config uses `http://localhost:2000`).
+- API requests use `withCredentials: true`, so cross-origin cookie behavior depends on browser and backend cookie settings.
+- No frontend test scripts are currently configured in `package.json`.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
